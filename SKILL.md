@@ -72,6 +72,7 @@ Before laying out slides, write a card for each:
 ID and role: Which step of the argument does this slide perform?
 Title and point: What should the audience understand or accept?
 Evidence and scope: Where is the support, and what does it establish?
+Needs and adds: What prior knowledge does this slide require, and what does it establish?
 Main visual: What comparison or relationship should be inspected?
 Explanation and transition: How is it read, and why is the next slide needed?
 Timing and build: Estimated seconds, reveal states, and static alternative.
@@ -83,7 +84,13 @@ Choose a **central evidence moment** and reserve time to read and explain it. It
 
 Plan the local rhythm: establish the reading conditions, present the evidence, pause to interpret it, then test the boundary or move to the next question. State the research question early; do not hide essential context to manufacture suspense.
 
-**Output of this phase**: a storyboard, a main-talk time total, focal evidence, and backup-slide placement. Estimate time from reading and reasoning effort, not a universal slides-per-minute rule.
+**Required logic check and repair before Phase 3**: Review the storyboard as a first-time member of the intended audience. For every adjacent pair and section boundary, compare what the preceding slides establish with what the next slide requires. Detect missing definitions, unexplained design choices, unintroduced comparison criteria, and unsupported inferential jumps. Follow the transition-audit procedure in `references/storyboard.md`; perform it without waiting for the user to request connecting material.
+
+Repair the content directly: reorder or clarify existing slides, and automatically insert the minimum necessary bridging slides when a missing explanation needs its own page. Each inserted slide must supply a specific prerequisite from available sources or clearly labeled reasoning; a generic divider or transition sentence does not supply missing scientific content. Never invent evidence to connect the story.
+
+Respect hard page and time limits. First recover room by merging or removing lower-priority repetition. If essential reasoning still cannot fit, identify the concrete constraint conflict instead of silently exceeding the limit or omitting the prerequisite. With flexible counts, add needed pages and recalculate timing. Recheck affected transitions after every repair until no repairable dependency gap remains; flag any source-dependent gap that cannot be resolved.
+
+**Output of this phase**: a repaired storyboard, a main-talk time total, focal evidence, and backup-slide placement, with brief working notes on added or reorganized explanations. Estimate time from reading and reasoning effort, not a universal slides-per-minute rule.
 
 ### Phase 3 · Give the Evidence a Visual Form
 
@@ -123,6 +130,8 @@ If a tool cannot implement or verify an effect, use a numbered static layout or 
 ### Phase 5 · Validate the Argument and the Actual Artifact
 
 Read `references/quality-checklist.md`. Check claims and sources before appearance, then verify figures, timing, build states, and export. Compare key values, conditions, and wording against the owning material.
+
+Repeat the Phase 2 logic check on the actual final slide sequence, including inserted pages and section boundaries. Check that explanations survived layout edits and static export, added pages preserve the argument and budget, and the closing answer follows from evidence shown in the main talk. Repair any remaining gaps before delivery. This is an agent reasoning task; passing the optional JSON checker does not perform it.
 
 Render and inspect every delivered page. Inspect important intermediate states when using reveals. Static rendering does not prove playback in another viewer. For Beamer, compile and inspect both the presentation and complete handout; count frames and exported pages separately.
 

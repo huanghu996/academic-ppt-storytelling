@@ -11,6 +11,7 @@ Any failed item prevents describing the result as a fully verified academic pres
 - [ ] **Figure meaning**: units, reference, axes, scales, masks, normalization, and interval definitions retain their actual meaning.
 - [ ] **Evidence status**: missing, unchecked, illustrative, or generated content is not presented as a confirmed finding.
 - [ ] **Complete information**: consequential conditions and limits remain visible in the main talk and static version.
+- [ ] **Logical continuity**: the central argument has no unexplained prerequisite or unsupported inference left between slides. Repairable gaps have been fixed; source-dependent gaps are explicitly identified in a draft.
 - [ ] **Usable target artifact**: files exist, open, match the requested format and count, and retain readable essential content; editability claims are accurate.
 
 ## B. Argument and slide inspection
@@ -24,6 +25,9 @@ Any failed item prevents describing the result as a fully verified academic pres
 - [ ] Controls, counterexamples, and contrary outcomes appear where they affect interpretation.
 - [ ] Training/validation/test, measurement/simulation/schematic, and time samples/independent repeats remain distinct.
 - [ ] Transitions explain why the next question follows, with enough time to read and interpret central evidence.
+- [ ] Every adjacent pair and section boundary has been checked against what the intended audience knows and what the next slide requires.
+- [ ] Missing necessary explanations were automatically supplied by clarification, reordering, or substantive bridging slides; dividers and connective phrases did not substitute for them.
+- [ ] Added or reorganized pages have a distinct purpose, traceable support or labeled reasoning, and valid incoming/outgoing relationships; count and time limits still hold.
 - [ ] Paper discussions separate authors' claims and the presenter's critique; proposals do not contain fabricated findings.
 
 ## C. Visual and source inspection
@@ -64,6 +68,7 @@ Any failed item prevents describing the result as a fully verified academic pres
 | Compelling story, weak support | Ledger or inference gap | Inspect the owning source and narrow the claim |
 | Dense paper screenshot | Too many questions in one figure | Retain relevant panels and location; redraw from data when available |
 | Method is clear but motivation is not | Design choices disconnected from hypothesis | Connect choices to the explanations they test |
+| Slides make sense individually but the talk jumps between them | A prerequisite, design rationale, or comparison condition is missing | Audit the handoff; move or add the actual explanation, using a new page only when needed |
 | Every slide competes for attention | No hierarchy or pacing | Remove branches and reserve interpretation time for central evidence |
 | Many effects or incomplete export | Builds lack purpose or a static plan | Remove motion, use numbered annotations, or add permitted step pages |
 | Backup navigation confuses the talk | Branches replace the linear argument | Keep main inference in the main talk and test short optional return paths |
@@ -82,7 +87,7 @@ Exit `0`: no structural blockers. Exit `1`: blockers found. Exit `2`: file-read 
 
 Checks cover required fields, duplicate IDs, dangling evidence references, findings/interpretations without usable evidence, misuse of missing/illustrative evidence, main-time overrun, an optional total-entry count, static fallbacks, and real-time labels. Supplied but unchecked sources generate warnings.
 
-The checker does not inspect source truth, causal validity, statistical power, chart/data correspondence, rendered layout, actual frame/page counts, or playback. Complete applicable scientific and artifact review even when it reports zero blockers.
+The checker does not inspect source truth, causal validity, logical continuity between slides, statistical power, chart/data correspondence, rendered layout, actual frame/page counts, or playback. The agent must perform the transition audit itself. Complete applicable scientific and artifact review even when the checker reports zero blockers.
 
 ## H. Skill-level scenario validation
 

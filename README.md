@@ -16,7 +16,7 @@ An AI-agent Skill for turning research into clear academic presentations, with e
 6. **Boundary** — Show where the conclusion holds and where it fails.
 7. **Takeaway** — Answer the opening question and identify what remains open.
 
-Each slide has one main point, appropriate evidence, and a reason to lead into the next. Adapt the structure to proposals, theory, and inconclusive results without inventing findings.
+Each slide has one main point and appropriate evidence. The agent checks the logic between slides and fills missing explanations, adding necessary pages within the agreed limits. Adapt the structure to proposals, theory, and inconclusive results without inventing findings.
 
 ## Start with
 

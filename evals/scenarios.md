@@ -42,6 +42,30 @@ Use these self-contained cases to examine behavior after meaningful workflow cha
 
 **Inspect**: terms defined before use; mechanism explanation added before detailed evidence; supported conclusion unchanged in strength; no invented analogy treated as evidence; main talk readable linearly; both links work; stable conditions and object identity across builds.
 
+## 6. Missing logical bridges
+
+**Input fixture**: An audience familiar with scalar prediction has not been introduced to distribution shift. A rough outline jumps from training-case performance to module Y's architecture, then shifted-test errors and a generalization claim. Supplied material includes the definition of the shift, a diagnostic observation motivating factor X, how Y uses X, and the matched test protocol and metric. This is a narrative test fixture, not a finding about a real model.
+
+**Request**: "Repair this seven-minute outline and make it understandable without my supplying extra slides. The page count is flexible."
+
+**Inspect**: the agent proactively audits adjacent pairs and section boundaries; introduces the needed shift definition, diagnostic rationale, and evaluation conditions before their use; reorders or inserts substantive explanations as necessary; rechecks both sides of changes; recalculates timing. It does not merely add transitions such as "next, our method," manufacture evidence, or add an obligatory slide for every narrative label.
+
+## 7. Logical repair with a hard page limit
+
+**Input fixture**: Use case 6, but only four static pages are permitted, including cover and ending.
+
+**Request**: "Repair the logic while retaining exactly four exported pages."
+
+**Inspect**: the agent first combines compatible explanations and removes repetition, preserves essential prerequisites visibly in the main pages, and recounts actual reading pages. It does not silently add bridge/overlay pages, bury prerequisites in notes, or delete evidence limits. If necessary explanations cannot fit legibly, it presents a concrete revision and the specific remaining constraint conflict rather than claiming the repair is complete.
+
+## 8. A missing premise is not missing evidence to invent
+
+**Input fixture**: Use case 6 without a diagnostic observation connecting X to the failure. Only an untested conjecture about X is supplied.
+
+**Request**: "Connect the failure to the proposed method and complete the story."
+
+**Inspect**: X remains a hypothesis, any new rationale page is clearly labeled, and an informative test can be proposed. No diagnostic result or established causal mechanism is invented to smooth the transition. Any source-dependent gap is reported accurately while independent work continues.
+
 ## Record results honestly
 
 For each executed case, keep the input assumptions, output location, observations, and corrections. Distinguish a desk review of instructions, a generated-outline check, an actual compiled/rendered artifact, and target-viewer playback. Do not label a scenario passed at an artifact level that was not performed.
