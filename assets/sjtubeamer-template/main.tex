@@ -1,0 +1,186 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+% Original academic starter; uses unmodified SJTUBeamer v3.2.0 dependencies.
+% All research wording below is instructional, not a reported finding.
+\documentclass[11pt,aspectratio=169]{beamer}
+\usetheme[min,red,light,en,default]{sjtubeamer}
+\usepackage{amsmath,amssymb,booktabs}
+\usepackage{graphicx}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{%
+  \leavevmode\hbox{%
+    \begin{beamercolorbox}[wd=.87\paperwidth,ht=2.8ex,dp=1.2ex,leftskip=1.8em]{author in head/foot}%
+      \usebeamerfont{author in head/foot}\insertshorttitle
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.13\paperwidth,ht=2.8ex,dp=1.2ex,center]{date in head/foot}%
+      \insertframenumber/\inserttotalframenumber
+    \end{beamercolorbox}}}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamerfont{framesubtitle}{size=\small}
+\pdfstringdefDisableCommands{\def\translate#1{#1}}
+
+% Replace metadata with the actual author and appropriate affiliation.
+\title[Scientific argument]{Research Question and Evidence}
+\subtitle{An academic presentation starter}
+\author{Author Name}
+\institute{Research Group}
+\date{\today}
+
+% Put essential conditions in the body; use this line for traceable sources.
+\newcommand{\evidencesource}[1]{%
+  \par\vfill{\fontsize{8}{9.5}\selectfont\color{black!65}#1\par}}
+\newcommand{\slot}[1]{\textit{[#1]}}
+
+% Keep placeholders honest and compile without a missing figure file.
+\newcommand{\evidencefigure}[1]{%
+  \IfFileExists{#1}{%
+    \includegraphics[width=\linewidth,height=.43\textheight,keepaspectratio]{#1}%
+  }{%
+    \fbox{\parbox[c][.37\textheight][c]{.90\linewidth}{%
+      \centering\textbf{Insert a verified evidence figure}\par\medskip
+      Preserve axes, units, comparison conditions,\par and uncertainty definitions.\par\medskip
+      \small No result is supplied in this template.}}%
+  }}
+
+\begin{document}
+
+% Logical frame 1. No automatic section-divider frames are added.
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+\section{Question}
+\begin{frame}{The scientific question}
+  \begin{block}{Question}
+    How does \slot{factor} affect \slot{outcome} under \slot{conditions}?
+  \end{block}
+  \medskip
+  \textbf{Why this matters}\par
+  \slot{Explain the scientific consequence in one concrete sentence.}\par
+  \medskip
+  \textbf{Audience task}\par
+  \slot{State what the audience should be able to assess by the end.}
+  \evidencesource{Template only. Replace instructions with sourced scientific content.}
+\end{frame}
+
+\begin{frame}{What the current evidence establishes}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{.47\textwidth}
+      \textbf{Known within scope}\par\medskip
+      \slot{A checked observation, definition, or prior result.}\par\medskip
+      Source: \slot{paper, figure/table, page, or dataset version}.
+    \end{column}
+    \begin{column}{.47\textwidth}
+      \textbf{Still unresolved}\par\medskip
+      \slot{The specific condition or explanation not established.}\par\medskip
+      Avoid claiming a literature gap before checking coverage.
+    \end{column}
+  \end{columns}
+  \evidencesource{Evidence status: pending replacement with checked sources.}
+\end{frame}
+
+\begin{frame}{A testable hypothesis}
+  \begin{block}{Hypothesis, not an established mechanism}
+    If \slot{factor} changes while \slot{conditions} remain matched,
+    then \slot{outcome} is expected to change in \slot{specified way}.
+  \end{block}
+  \medskip
+  \textbf{Competing explanation}\par
+  \slot{An alternative that could produce a similar observation.}\par
+  \medskip
+  \textbf{Potential challenge}\par
+  \slot{An observation that would weaken the proposed explanation.}
+  \evidencesource{Support the rationale with a precise source; label inference as inference.}
+\end{frame}
+
+\section{Design}
+% Two discrete overlay pages, one logical frame; all conditions remain visible.
+\begin{frame}[label=design]{A comparison that distinguishes explanations}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{.30\textwidth}
+      \textbf{1. Match}\par\medskip
+      Define the objects, operating conditions, and baseline.
+    \end{column}
+    \begin{column}{.30\textwidth}
+      \textbf{2. Test}\par\medskip
+      Vary the target factor and record the specified outcome.
+    \end{column}
+    \begin{column}{.30\textwidth}
+      \textbf{3. Interpret}\par\medskip
+      Compare explanations using prespecified criteria.
+    \end{column}
+  \end{columns}
+  \bigskip
+  \uncover<2->{\alert{State the actual unit of replication and the data split.}}\par
+  \medskip\par
+  \hyperlink{backup-metric}{\beamerbutton{Metric details}}
+  \evidencesource{Design schematic only. It is not experimental evidence.}
+\end{frame}
+
+\section{Evidence}
+\begin{frame}[label=evidence]{Evidence for the claim under stated conditions}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{.62\textwidth}
+      \centering\evidencefigure{figures/key-evidence.pdf}
+    \end{column}
+    \begin{column}{.34\textwidth}
+      \textbf{Read the figure}\par\smallskip
+      \slot{Objects, axes, and baseline.}\par\medskip
+      \textbf{Inspect the contrast}\par\smallskip
+      \slot{The supported relationship.}\par\medskip
+      \textbf{Limit the inference}\par\smallskip
+      \slot{Conditions and uncertainty.}
+    \end{column}
+  \end{columns}
+  \evidencesource{Source: \slot{E01; file/DOI, figure, version}. This is a figure slot, not a finding.}
+\end{frame}
+
+\begin{frame}{Alternative explanations and limits}
+  \begin{itemize}
+    \item \textbf{Addressed:} \slot{Which explanation the controls constrain.}
+    \item \textbf{Still possible:} \slot{What the current design cannot distinguish.}
+    \item \textbf{Scope:} \slot{Objects, conditions, scales, and sampling covered.}
+  \end{itemize}
+  \bigskip
+  A missing expected effect does not by itself establish equivalence or universal failure.
+  \evidencesource{Keep limitations that change the conclusion visible in the main talk.}
+\end{frame}
+
+\section{Conclusion}
+\begin{frame}{Answer the opening question within the evidence}
+  \begin{block}{Supported answer or current judgment}
+    \slot{A concrete answer with the conditions that make it defensible.}
+  \end{block}
+  \medskip
+  \textbf{Next informative test}\par
+  \slot{The experiment or derivation that would reduce the remaining uncertainty.}
+  \evidencesource{For a proposal, summarize the hypothesis and test plan instead of inventing a result.}
+\end{frame}
+
+% SJTUBeamer adds part pages by default; keep the backup count explicit.
+\AtBeginPart{}
+\appendix
+\section{Backup}
+\begin{frame}[label=backup-metric]{Backup: metric definition and source ledger}
+  \textbf{Example definition, not a numerical result}
+  \[
+    E = \frac{\lVert\widehat{\mathbf{u}}-\mathbf{u}\rVert_2}
+                  {\lVert\mathbf{u}\rVert_2},
+    \qquad \lVert\mathbf{u}\rVert_2 > 0
+  \]
+  Define the reference, domain, mask, normalization, and averaging procedure.
+  \medskip
+  \begin{tabular}{@{}lll@{}}
+    \toprule
+    ID & Source location & Scope \\
+    \midrule
+    E01 & \slot{file/DOI and figure} & \slot{conditions covered} \\
+    \bottomrule
+  \end{tabular}
+  \medskip\par
+  \hyperlink{design}{\beamerbutton{Return to design}}
+  \evidencesource{Replace this optional definition if it does not fit the research.}
+\end{frame}
+
+\end{document}

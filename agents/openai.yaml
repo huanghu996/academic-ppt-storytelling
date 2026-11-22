@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Presentation Storytelling"
+  short_description: "Scientific arguments, evidence visuals, and Beamer slides"
+  default_prompt: "Use $academic-ppt-storytelling to build an evidence-led academic talk from my materials, starting with the argument and storyboard and delivering the requested PowerPoint or SJTUBeamer LaTeX files."

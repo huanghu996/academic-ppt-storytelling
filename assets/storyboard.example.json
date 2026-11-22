@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "mode": "proposal",
+  "main_message": "Illustrative plan only: use matched controls to distinguish explanations of cross-geometry error; no research result is reported.",
+  "budget_seconds": 300,
+  "expected_total_slides": 5,
+  "evidence": [],
+  "slides": [
+    {
+      "id": "S01",
+      "title": "A validation plan for cross-geometry error",
+      "role": "State the research question and project stage",
+      "point": "Design a comparison that can distinguish possible error sources.",
+      "claim_type": "question",
+      "evidence_ids": [],
+      "duration_seconds": 30,
+      "in_main": true,
+      "visual": "A concise question and objects explicitly labeled as a schematic; no fabricated result chart.",
+      "transition": "First state the explanations to test.",
+      "boundary": "Only a question is proposed; literature coverage and performance remain unverified.",
+      "animation": {
+        "mode": "none",
+        "steps": 0,
+        "static_fallback": "Complete static question slide."
+      }
+    },
+    {
+      "id": "S02",
+      "title": "Does scale shift affect near-wall error?",
+      "role": "State the hypothesis and competing explanation",
+      "point": "Compare scale shift and operating-condition change as possible explanations.",
+      "claim_type": "hypothesis",
+      "evidence_ids": [],
+      "duration_seconds": 60,
+      "in_main": true,
+      "visual": "Two dashed hypothesis relationships labeled unverified; no established-causality wording.",
+      "transition": "Control conditions to distinguish the explanations.",
+      "boundary": "The hypothesis has no supplied empirical support.",
+      "animation": {
+        "mode": "none",
+        "steps": 0,
+        "static_fallback": "Both hypotheses are visible together."
+      }
+    },
+    {
+      "id": "S03",
+      "title": "Matched conditions and independent test objects",
+      "role": "Explain the controlled design",
+      "point": "Track geometry, operating condition, and model-selection purpose separately.",
+      "claim_type": "plan",
+      "evidence_ids": [],
+      "duration_seconds": 100,
+      "in_main": true,
+      "visual": "An editable partitioning schematic with stable colors and direct labels.",
+      "transition": "Define how each possible outcome will be interpreted.",
+      "boundary": "This is a plan; actual data independence remains to be checked.",
+      "animation": {
+        "mode": "highlight",
+        "steps": 2,
+        "static_fallback": "One complete base diagram with numbered annotations; no added pages."
+      }
+    },
+    {
+      "id": "S04",
+      "title": "Criteria that distinguish the explanations",
+      "role": "Prespecify supportive and contrary observations",
+      "point": "State before testing what would support or challenge each explanation.",
+      "claim_type": "plan",
+      "evidence_ids": [],
+      "duration_seconds": 70,
+      "in_main": true,
+      "visual": "A complete explanation-versus-expected-observation table labeled as a plan, without simulated result curves.",
+      "transition": "State resource and sampling limits.",
+      "boundary": "Task-specific thresholds remain to be defined; no performance threshold is invented.",
+      "animation": {
+        "mode": "reveal",
+        "steps": 2,
+        "static_fallback": "The entire decision table with all conditions visible."
+      }
+    },
+    {
+      "id": "S05",
+      "title": "Validation scope and next inputs",
+      "role": "Close the current stage and invite discussion",
+      "point": "Check literature, object partitions, and sampling conditions before performing the test.",
+      "claim_type": "limitation",
+      "evidence_ids": [],
+      "duration_seconds": 40,
+      "in_main": true,
+      "visual": "A concise scope and next-input list, without a completed-result label.",
+      "transition": "Discussion.",
+      "boundary": "No paper, empirical dataset, or research finding is supplied in this example; structure is not scientific validation.",
+      "animation": {
+        "mode": "none",
+        "steps": 0,
+        "static_fallback": "Complete static ending."
+      }
+    }
+  ]
+}
