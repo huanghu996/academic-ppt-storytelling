@@ -66,6 +66,30 @@ Use these self-contained cases to examine behavior after meaningful workflow cha
 
 **Inspect**: X remains a hypothesis, any new rationale page is clearly labeled, and an informative test can be proposed. No diagnostic result or established causal mechanism is invented to smooth the transition. Any source-dependent gap is reported accurately while independent work continues.
 
+## 9. Generic PPT wording uses the default template
+
+**Input fixture**: Supplied research material is sufficient for a new ten-minute talk. No output format or external template is specified.
+
+**Request**: "用这个 skill 把这篇论文做成 10 分钟的 PPT。"
+
+**Inspect**: the agent selects the bundled SJTUBeamer LaTeX route without asking the user to choose a format or treating "PPT" as a `.pptx` requirement; reads the LaTeX guide, copies the actual starter and dependencies, adapts its source, and delivers maintained source plus compiled PDF when the environment permits. The default is not merely mentioned while a PowerPoint file or an unrelated theme is produced.
+
+## 10. Explicit PowerPoint overrides the default
+
+**Input fixture**: Use case 9, but the user explicitly needs a PowerPoint-editable file.
+
+**Request**: "请输出可以在 PowerPoint 里编辑的 .pptx，不要 LaTeX。"
+
+**Inspect**: the agent honors `.pptx`, uses an appropriate native authoring route, and does not force SJTUBeamer/PDF. An in-place request to edit an existing PowerPoint deck also preserves its format unless conversion is requested.
+
+## 11. Missing compiler does not change the chosen format
+
+**Input fixture**: Use case 9 in an environment without XeLaTeX or a usable alternative LaTeX compiler; the starter files are available.
+
+**Request**: "Make the academic presentation with this Skill."
+
+**Inspect**: the agent completes the available source work, identifies the specific compilation limitation, and labels the source uncompiled. It neither claims to have built a PDF nor silently switches to a `.pptx` exporter simply because one is available.
+
 ## Record results honestly
 
 For each executed case, keep the input assumptions, output location, observations, and corrections. Distinguish a desk review of instructions, a generated-outline check, an actual compiled/rendered artifact, and target-viewer playback. Do not label a scenario passed at an artifact level that was not performed.

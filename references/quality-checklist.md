@@ -13,6 +13,7 @@ Any failed item prevents describing the result as a fully verified academic pres
 - [ ] **Complete information**: consequential conditions and limits remain visible in the main talk and static version.
 - [ ] **Logical continuity**: the central argument has no unexplained prerequisite or unsupported inference left between slides. Repairable gaps have been fixed; source-dependent gaps are explicitly identified in a draft.
 - [ ] **Usable target artifact**: files exist, open, match the requested format and count, and retain readable essential content; editability claims are accurate.
+- [ ] **Default route implemented**: a new generic presentation/PPT request uses the actual bundled SJTUBeamer theme and LaTeX source plus PDF; explicit alternatives and in-place editing targets take priority. A missing compiler is disclosed rather than used to justify an unrequested format switch.
 
 ## B. Argument and slide inspection
 
@@ -58,6 +59,7 @@ Any failed item prevents describing the result as a fully verified academic pres
 - [ ] All rendered pages were inspected, with closer review of dense figures, formulas, tables, and font substitutions.
 - [ ] Counts, hidden pages, notes, media, links, and remaining placeholders match the actual delivery scope.
 - [ ] For LaTeX, the log, logical frames, presentation PDF pages, and complete handout were checked separately.
+- [ ] For the default route, the adapted source loads `sjtubeamer`, the required local theme/assets are included, and the build output matches the delivered source; an uncompiled source is clearly identified.
 - [ ] If rehearsal overruns, repeated background and side branches are removed before essential conditions or limits.
 
 ## F. Diagnose before polishing

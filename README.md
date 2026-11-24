@@ -2,7 +2,7 @@
 
 **Make the scientific argument visible.**
 
-An AI-agent Skill for turning research into clear academic presentations, with evidence-driven visuals and restrained animation. Supports PowerPoint, LaTeX Beamer, and presentation outlines through the agent's available tools.
+An AI-agent Skill for turning research into clear academic presentations, with evidence-driven visuals and restrained animation. Uses the bundled SJTUBeamer LaTeX template and PDF by default; PowerPoint and other formats are available on request.
 
 ## The core idea
 
@@ -23,7 +23,7 @@ Each slide has one main point and appropriate evidence. The agent checks the log
 Copy this prompt to your agent:
 
 ```text
-Clone https://github.com/huanghu996/academic-ppt-storytelling into your Skills directory, read SKILL.md, use $academic-ppt-storytelling to create my academic presentation, and report reproducible bugs in the repository's issues.
+Clone https://github.com/huanghu996/academic-ppt-storytelling into your Skills directory, read SKILL.md, use $academic-ppt-storytelling with its bundled SJTUBeamer template to create my academic presentation, and report reproducible bugs in the repository's issues.
 ```
 
 ## Included

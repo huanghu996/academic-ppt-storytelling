@@ -1,10 +1,14 @@
 # LaTeX Route: SJTUBeamer
 
+This is the default production route for a new academic talk when no output format is explicitly specified, including generic requests to "make a PPT." Explicit PowerPoint, other format/template requirements, and in-place edits follow the routing rules in [implementation.md](implementation.md).
+
 Use the real [sjtug/SJTUBeamer](https://github.com/sjtug/SJTUBeamer) GitHub project. The bundled starter pins release [v3.2.0](https://github.com/sjtug/SJTUBeamer/releases/tag/v3.2.0), commit `b3dcba72d80892c7d2558e1bf838d4c298d910bd`; it is not a hand-drawn imitation of that theme.
 
 ## 1. Copy the complete starter
 
 Copy [assets/sjtubeamer-template](../assets/sjtubeamer-template/README.md) into the talk workspace, including its `.sty` files, `vi/`, and notices. Edit `main.tex`, not the Skill's reusable copy. The theme runtime is local, so a build needs no GitHub download. A suitably provisioned TeX distribution is still required.
+
+Check that the adapted source still loads `sjtubeamer` with `\usetheme`, that its local dependencies are present, and that the compiled output uses this theme. If compilation is unavailable, report the specific missing dependency and retain the chosen LaTeX route; do not automatically replace it with PowerPoint.
 
 The new English starter uses `beamer`, `aspectratio=169`, and `\usetheme[min,red,light,en,default]{sjtubeamer}`. It avoids system-specific fonts, external code execution, and a bibliography processor. User-selected templates and theme options take priority over these defaults.
 

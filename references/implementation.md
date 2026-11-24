@@ -1,19 +1,23 @@
 # Implementation and Delivery
 
-Use the target format and the tools available in the current environment. Read tool documentation before use and follow any environment-specific presentation guidance that applies to that format.
+Resolve the target format before choosing tools or backend-specific guidance. Use tools appropriate to that format, read their documentation, and follow the applicable environment guidance. Tool availability alone does not determine the output format.
 
 ## 1. Route by the requested deliverable
 
 | Request | Deliver | Working rule |
 |---|---|---|
-| PowerPoint | Editable `.pptx` | Preserve required text, tables, charts, and diagrams as editable objects where feasible |
+| New talk without an explicit format, including generic "slides" or "PPT" wording | Bundled SJTUBeamer `.tex` sources, assets, and compiled PDF | This is the default; read [sjtubeamer.md](sjtubeamer.md), copy the actual starter, and compile it |
+| Explicit PowerPoint / `.pptx` request | Editable `.pptx` | Override the LaTeX default; preserve required text, tables, charts, and diagrams as editable objects where feasible |
 | LaTeX/Beamer | Maintained `.tex` sources, necessary assets, compiled PDF | Use the bundled SJTUBeamer route unless the user chooses another theme; read [sjtubeamer.md](sjtubeamer.md) |
+| In-place edit of an existing deck | The existing format unless conversion is requested | Preserve the user's editing target; source material alone does not set the output format |
 | Outline or speaker script | Requested text/document | Include purpose, evidence locations, and transitions; do not expand into file production unnecessarily |
-| PDF | Complete static PDF | Conditions and conclusions must remain visible without clicks; render every page |
+| PDF without a specified production format | Complete static PDF, using SJTUBeamer by default | Preserve an explicitly selected template; conditions and conclusions must remain visible without clicks; render every page |
 | HTML presentation | Requested HTML package | Keyboard navigation, readable reduced-motion state, and agreed offline/export behavior |
 | Existing cloud slides | The existing native destination or agreed export | Use connected capabilities without silently switching platform |
 
-Do not replace a requested format. Without a specified format, PowerPoint is a reasonable starting assumption; use LaTeX when requested. A PDF is not a substitute for an editable PowerPoint.
+The word "PPT" used casually for an academic talk is not an explicit native-file requirement. Requests for a `.pptx`/`.ppt` file, a PowerPoint deliverable, or editing in PowerPoint are explicit and take priority. Retain another requested format or template, and keep outline-only tasks as outlines. State the SJTUBeamer default briefly and proceed without a format-confirmation question when no conflicting requirement exists.
+
+For the default route, retain the actual theme and deliver maintained source plus compiled PDF. If the compiler or a dependency is unavailable, identify the specific build gap and deliver the available LaTeX source as uncompiled. Do not silently substitute `.pptx`, a different theme, or a screenshot-based imitation. A PDF is not a substitute when editable PowerPoint was explicitly requested.
 
 ## 2. Maintain sources and assets
 

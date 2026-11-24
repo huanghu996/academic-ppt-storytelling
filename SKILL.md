@@ -1,9 +1,9 @@
 ---
 name: academic-ppt-storytelling
-description: Create or restructure academic presentations for paper discussions, lab meetings, conferences, research proposals, defenses, and progress reports. Build a scientific argument, write a slide-by-slide narrative, and match claims to traceable evidence, readable visuals, and restrained animation. Deliver the requested editable PowerPoint, LaTeX Beamer source with PDF, or outline. Use for whole-talk content and communication design; isolated formatting fixes, manuscript editing, and data analysis do not require the full workflow.
+description: Create or restructure academic presentations for paper discussions, lab meetings, conferences, research proposals, defenses, and progress reports. Build a scientific argument and a slide-by-slide narrative with traceable evidence and restrained animation. Default to the bundled SJTUBeamer LaTeX template and deliver source plus compiled PDF; use PowerPoint or another format when explicitly requested, and preserve existing formats for in-place edits. Generic requests for slides or PPT use the LaTeX default. Isolated formatting fixes, manuscript editing, and data analysis do not require the full workflow.
 ---
 
-# Academic PPT Storytelling · Make the Scientific Argument Visible
+# Academic Storytelling · Make the Scientific Argument Visible
 
 **Goal**: Turn a paper, dataset, existing deck, or research idea into a talk whose audience can explain the question, follow the reasoning, assess the evidence, and recognize the limits of the conclusion.
 
@@ -11,7 +11,9 @@ A strong academic presentation connects **argument**, **sequence**, and **visual
 
 Use the user's language, template, slide count, and output format. This Skill is written in English; it does not require every resulting talk to be in English. A topic without results can support a proposal or question-led outline, never fabricated findings.
 
-For PowerPoint, deliver an editable `.pptx`. For LaTeX, use the bundled **SJTUBeamer** starter unless the user selects another theme, and deliver source plus compiled PDF. Do not substitute one format for another without agreement.
+**Default format: SJTUBeamer LaTeX.** For a new talk without an explicit output requirement, copy the bundled **SJTUBeamer** starter and deliver maintained `.tex` sources, necessary assets, and a compiled PDF. Generic wording such as "make slides," "prepare a presentation," or "做一个 PPT" does not by itself request a PowerPoint file. Resolve this before selecting authoring tools.
+
+Explicit `.pptx`/PowerPoint requests and other specified formats or templates take priority. For an in-place edit to an existing deck, preserve its format unless conversion is requested; a file supplied only as research material does not set the output format. Outline-only requests remain outlines. If the LaTeX build cannot run, identify the dependency and deliver the available source as uncompiled; do not silently switch to PowerPoint.
 
 ## Reference Map
 
@@ -25,7 +27,7 @@ Read by phase. For a narrow revision, load only the relevant guidance.
 | [evidence-visuals.md](references/evidence-visuals.md) | Match visual encodings to evidence and preserve scientific meaning | Selecting, redrawing, or laying out figures |
 | [animation-patterns.md](references/animation-patterns.md) | Stable diagrams, progressive emphasis, real time, and static alternatives | Adding any reveal, animation, or temporal sequence |
 | [implementation.md](references/implementation.md) | Format routing, editable objects, source management, and verification | Producing presentation files |
-| [sjtubeamer.md](references/sjtubeamer.md) | Pinned GitHub theme, build commands, overlays, handouts, citations, and troubleshooting | Producing LaTeX slides |
+| [sjtubeamer.md](references/sjtubeamer.md) | Pinned GitHub theme, build commands, overlays, handouts, citations, and troubleshooting | Producing a new talk by default, or any requested LaTeX slides |
 | [quality-checklist.md](references/quality-checklist.md) | Delivery blockers, visual review, rehearsal, and repair decisions | Before every delivery |
 
 ## Workflow
@@ -33,6 +35,8 @@ Read by phase. For a narrow revision, load only the relevant guidance.
 ### Phase 1 · Frame the Question and the Audience's Task
 
 Establish the audience, setting, speaking time, Q&A allocation, language, page count, output format, and available evidence from the supplied material. A requested total includes the cover and ending unless specified otherwise. In Beamer, distinguish logical frames from overlay PDF pages before interpreting an exact page limit.
+
+Apply the default-format rule above before choosing a backend. For a generic presentation request, proceed with SJTUBeamer and briefly state that source plus PDF will be delivered; do not ask the user to choose a format merely to apply this default. A generic use of "PPT" and the presence of a convenient PowerPoint exporter are not reasons to choose `.pptx`.
 
 Proceed with reasonable assumptions for ordinary preferences. If missing material changes a scientific conclusion, finish independent work and ask for that material together. Do not require the user to approve every intermediate stage.
 
@@ -109,7 +113,7 @@ Redraw from actual data when available, retaining transformations and provenance
 
 ### Phase 4 · Build the Talk and Add Only Useful Motion
 
-Read `references/implementation.md`. Use the target format and tools actually available. For LaTeX, read `references/sjtubeamer.md` and copy [the bundled starter](assets/sjtubeamer-template/main.tex), its companion files, and theme dependencies into the talk workspace.
+Read `references/implementation.md` and implement the format resolved in Phase 1. For the default route, or any explicit LaTeX request, read `references/sjtubeamer.md` and copy [the complete bundled starter](assets/sjtubeamer-template/README.md), including its companion files, theme dependencies, and notices, into the talk workspace. Use its actual `\usetheme[...]{sjtubeamer}` configuration and compile the adapted source. An unrelated Beamer theme or a PowerPoint imitation does not implement the default template.
 
 Complete a coherent static talk first. For each optional animation, read `references/animation-patterns.md` and answer:
 
@@ -131,6 +135,8 @@ If a tool cannot implement or verify an effect, use a numbered static layout or 
 
 Read `references/quality-checklist.md`. Check claims and sources before appearance, then verify figures, timing, build states, and export. Compare key values, conditions, and wording against the owning material.
 
+Verify format routing: a new generic presentation request uses the bundled SJTUBeamer source and compiled PDF, while explicit output requirements and in-place edits are honored. For the default route, inspect the actual source, theme files, and build output. An unavailable compiler must be reported as a build limitation, not concealed by a `.pptx` replacement.
+
 Repeat the Phase 2 logic check on the actual final slide sequence, including inserted pages and section boundaries. Check that explanations survived layout edits and static export, added pages preserve the argument and budget, and the closing answer follows from evidence shown in the main talk. Repair any remaining gaps before delivery. This is an agent reasoning task; passing the optional JSON checker does not perform it.
 
 Render and inspect every delivered page. Inspect important intermediate states when using reveals. Static rendering does not prove playback in another viewer. For Beamer, compile and inspect both the presentation and complete handout; count frames and exported pages separately.
@@ -151,11 +157,13 @@ When changing this Skill, use [the scenario suite](evals/scenarios.md) to assess
 
 ## Example Requests
 
-> Use $academic-ppt-storytelling to turn this paper into a 12-minute English lab-meeting talk. Deliver editable PowerPoint slides and distinguish the authors' conclusions from my critique.
+> Use $academic-ppt-storytelling to turn this paper into a 12-minute English lab-meeting talk. Use the bundled SJTUBeamer template, deliver LaTeX source and compiled PDF, and distinguish the authors' conclusions from my critique.
 
 > Use $academic-ppt-storytelling to create a 15-frame proposal with the bundled SJTUBeamer LaTeX template. Deliver the source and a complete handout PDF. No formal results are available.
 
 > Use $academic-ppt-storytelling to reorganize this deck while retaining its template and total page count. Repair the evidence chain, titles, and transitions before adding progressive emphasis.
+
+> Use $academic-ppt-storytelling to create an editable `.pptx` for PowerPoint from these materials. This request explicitly overrides the default LaTeX output.
 
 > Use $academic-ppt-storytelling to present these inconclusive experiments. Explain what the tests exclude, what remains uncertain, and which next test distinguishes the competing explanations.
 
