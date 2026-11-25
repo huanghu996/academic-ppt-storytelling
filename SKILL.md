@@ -10,6 +10,7 @@ description: Create or restructure academic presentations for paper discussions,
 A strong academic presentation connects **argument**, **sequence**, and **visual explanation**. The argument establishes what follows from the evidence. The sequence supplies information when the audience needs it. The visual explanation makes the decisive comparison or relationship easy to inspect. Set these decisions before choosing effects.
 
 Use the user's language, template, slide count, and output format. This Skill is written in English; it does not require every resulting talk to be in English. A topic without results can support a proposal or question-led outline, never fabricated findings.
+For Beamer slides containing Chinese, use `ctexbeamer` with `fontset=fandol` and compile with `latexmk -lualatex`.
 
 **Default format: SJTUBeamer LaTeX.** For a new talk without an explicit output requirement, copy the bundled **SJTUBeamer** starter and deliver maintained `.tex` sources, necessary assets, and a compiled PDF. Generic wording such as "make slides," "prepare a presentation," or "做一个 PPT" does not by itself request a PowerPoint file. Resolve this before selecting authoring tools.
 
